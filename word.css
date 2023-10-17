@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    min-height: 100vh;
+    background-color: rgb(134, 196, 211);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.word-counter{
+    position: relative;
+    background-color: #fff;
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    margin: 11px;
+    border-style: double;
+  }
+.count-items{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 33px 99px;
+}
+.item{
+    position: relative;
+}
+.item:not(:first-child)::before{
+    content: "";
+    position: absolute;
+    background: #cacaca;
+    width: 1px;
+    height: 100%;
+    left: -11px;
+
+}
+.item span{
+   color: #0a0b10;
+   font-size: 2.5em;
+   font-weight: 700;
+}
+.item p{
+    color: #7c7c7c;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: .4px;
+}
+.line{
+    background: #cacaca;
+    width: 95%;
+    height: 1px;
+}
+.text-counter{
+    width: 100%;
+}
+.text-counter textarea{
+    width: 99.9%;
+    resize: none;
+    outline: none;
+    /* border: navy; */
+    color: #0a0b10;
+    font-size: 1em;
+    line-height: 28px;
+    font-weight: 500; /* req chg */
+}
+.text-counter textarea::-webkit-scrollbar{
+    background-color: #c5cadf;
+    width: 9px;
+    border-radius: 2em;
+}
+.text-counter textarea::-webkit-scrollbar-thumb{
+    background: #7c7c7c;
+    border-radius: 2em;
+}
+.text-counter textarea::-webkit-scrollbar-thumb:hover{
+    background: rgb(243, 47, 80);
+}
+/*  media quary*/
+ @media screen and (max-width: 800px){
+    .word-counter {
+        flex-direction: row-reverse;
+    }
+    .count-items {
+        width: 200px;
+        align-items: baseline;
+        flex-direction: column;
+        padding: 0;
+    }
+    .item {
+
+        padding: 10px 0;
+    }
+    .item:not(:first-child)::before {
+    
+        width: 110px;
+        height: 1px;
+        left: auto;
+    }
+    .line {
+        background: #cacaca;
+        width: 1px;
+        height: 380px;
+        margin-right: 21px;
+    }
+    .item span {
+     
+        font-size: 2.2em;
+       
+    }
+    .item p{
+       
+        font-size: 0.9em;
+        font-weight: 750;
+       
+    }
+ }
