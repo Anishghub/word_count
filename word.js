@@ -18,6 +18,6 @@ inputText.addEventListener("input",() => {
     sentenceCount.textContent = textTrim.split(".").filter((item) => item).length;
     //  count para
 
-    paragrapheCount.textContent = textTrim.split("\n\n").filter((item) => item).length;
+    paragrapheCount.textContent = textTrim.split("\n").filter((item) => item).length;
 });
 
